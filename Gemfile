@@ -13,5 +13,9 @@ gem 'jquery-rails', '~> 4.0.0.beta2'
 
 group :development, :test do
   gem 'spring'
+  gem 'spring-commands-rspec'
+
+  gem 'rspec-rails'
+  gem 'capybara'
 end
 
