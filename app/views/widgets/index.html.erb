@@ -1,4 +1,7 @@
-<h1>All Widgets</h1>
+<% content_for :title, 'All widgets' %>
+<% content_for :toolbar do %>
+  <%= link_to 'New widget', new_widget_path %>
+<% end %>
 
 <ul>
   <%= render @widgets %>
