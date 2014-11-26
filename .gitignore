@@ -7,6 +7,12 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore generated assets
+/public/assets
+
+# Ignore temporary Dockerfile
+/Dockerfile
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
