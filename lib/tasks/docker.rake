@@ -3,15 +3,11 @@ namespace :docker do
 
   namespace :build do
     task :app => ['assets:precompile', 'assets:clean'] do
-      sh 'ln -snf Dockerfile.app Dockerfile'
-      sh 'docker build -t "mathie/widgets:latest" .'
-      sh 'rm -f Dockerfile'
+      sh 'docker build -t "mathie/widgets:latest" -f Dockerfile.app .'
     end
 
     task :web => ['assets:precompile', 'assets:clean'] do
-      sh 'ln -snf Dockerfile.web Dockerfile'
-      sh 'docker build -t "mathie/widgets-web:latest" .'
-      sh 'rm -f Dockerfile'
+      sh 'docker build -t "mathie/widgets-web:latest" -f Dockerfile.web .'
     end
   end
 
