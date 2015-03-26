@@ -23,7 +23,7 @@ EXPOSE ${PORT}
 
 # Setup runit to run the app
 RUN mkdir /etc/service/widgets
-ADD config/deploy/widgets.sh /etc/service/widgets/run
+COPY config/deploy/widgets.sh /etc/service/widgets/run
 
 # Install the app
 RUN adduser --system --group widgets
